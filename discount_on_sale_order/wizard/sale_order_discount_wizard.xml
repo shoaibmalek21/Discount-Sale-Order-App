@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <record id="discount_on_sale_order_wizard_view" model="ir.ui.view">
+            <field name="name">Discount On Sale Order Wizard Tree view</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <xpath expr="/form/header/button[@name='action_unlock']" position="after">
+                    <button name="%(discount_on_sale_order.discount_on_sale_order_action_window)d" type="action" string="Discount"/>
+                </xpath>
+                <xpath expr="/form/sheet/notebook/page/group/field[@name='amount_untaxed']" position="after">                       
+                        <!-- <field name="discounted_amount" widget='monetary'/> -->
+                </xpath>
+                <xpath expr="/form/sheet/group/group/field[@name='payment_term_id']" position="after">
+                        <field name="product_ids" invisible='1'/>
+                        <field name="discount_value" invisible='1'/>
+                </xpath>
+            </field>
+        </record> 
+
+</odoo>

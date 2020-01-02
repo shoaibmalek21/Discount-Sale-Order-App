@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+      	<record model="product.product" id="product.fixed_discount_product_id">
+         	<field name="default_code">D-FIXED</field>
+         	<field name="name">Fixed Discount</field>
+         	<field name="type">service</field>
+         	<field name="list_price">0</field>
+         	<field name="standard_price">0</field>
+         	<field name="purchase_line_warn">no-message</field>
+         	<field name="sale_line_warn">no-message</field>
+      	</record>
+      	<record model="product.product" id="product.percentage_discount_product_id">
+         	<field name="default_code">D-PER</field>
+         	<field name="name">Percentage Discount</field>
+         	<field name="type">service</field>
+         	<field name="list_price">0</field>
+         	<field name="standard_price">0</field>
+         	<field name="purchase_line_warn">no-message</field>
+         	<field name="sale_line_warn">no-message</field>
+      	</record>
+  	</data>
+</odoo>
